@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+* {	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {	font-family: 'Open Sans', sans-serif;
+	line-height: 1.5;
+}
+
+h1 {	font-weight: 300;
+	font-size: 50px;
+	line-height: 1.2;
+	margin-bottom: 15px;
+}
+
+/* Giriş Bölümü */
+.intro {	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #fff;
+	padding: 0 20px;
+}
+/* Giriş Bölümü Bitiş */
+
+/* Video Konumlandırma */
+.video-container {	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.video-container video {
+    min-width: 100%;
+	min-height: 100%;
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	object-fit: cover;
+}
+/* Video Konumlandırma Bitiş */
+
+/* Karartma Efekti */
+.video-container:after {	content: '';
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+/* Karartma Efekti Bitiş */
+
+.content {	z-index: 2;
+}
+
+.read-more {	display: inline-block;
+	padding: 10px 30px;
+	background: #333;
+	color: #fff;
+	border-radius: 5px;
+	border: solid #fff 1px;
+	margin-top: 25px;
+	opacity: 0.8;
+    transition: .2s all;
+    text-decoration: none;
+}
+
+.read-more:hover {	transform: scale(.9);
+}
+.navbar-nav a{
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.navbar-light .navbar-brand{
+    color: black;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.navbar-toggler{
+    padding: 1px 5px;
+    font-size: 18px;
+    line-height: .3;
+    background: antiquewhite;
+}
+.navbar .appbtn{
+    background-color: #1c2c33;
+    margin-left: 30px;
+    border-radius: 3px;
+    font-weight: 400;
+    color: antiquewhite;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    line-height: 2.3;
+}
+.accordion-item{
+    background: none;
+    color: #fff;
+}
+.accordion-button{
+    background: none;
+    color: #fff;
+}
+.accordion-button:not(.collapsed){
+    background-color: rgb(0, 0, 0, 0.5);
+    color: #fff;
+ }
+    </style>
+  </head>
+
+  <body>
+  <section class="intro">
+        <div class="video-container">
+            <video src="ruzgargulu.mp4.mp4" autoplay loop playsinline muted></video>
+        </div>
+        <div class="content">
+            <h2>Sıkça Sorulan Sorular</h2>
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Küresel ısınma ve iklim değişikliği arasındaki farklar nelerdir?
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      İkisi birbirlerine karışan kavramlar olmakla beraber küresel ısınma daha dar çaplıdır ve Dünya'nın uzun bir zaman dilimi içerisindeki 
+                      ısınmasını açıklamak için kullanılır.İklim değişikliği ise küresel ısınmayı kapsar ve meydana gelen daha büyük çaplı, birden fazla değişimi
+                      tanımlamak için kullanıır.Mesela yükselen deniz seviyeleri dahil; dağ buzullarının küçülmesi; Grönland, Antarktika ve Kuzey Kutbu'ndaki 
+                      buzların erimesinin hızlanması; ve çiçek/bitki çiçeklenme zamanlarındaki değişimler iklim değişikliğinin sonuçlarındandır.
+                      Detaylı bilgi için <a href="https://science.nasa.gov/climate-change/faq/whats-the-difference-between-climate-change-and-global-warming/">linki</a>
+                      ziyaret edebilirsiniz!
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                     İklim değişikliği neden gerçekleşiyor?
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        150 yıldır devam eden sanayileşme ve bunun sonucu olarak yakılan çok miktarda
+                         petrol ve kömür gibi fosil yakıtlar ikilim değişikliğinin temel nedeni olarak gösteriliyor. Ayrıca kesilen milyonlarca 
+                         hektar ormanda başlıca nedenler arasında. Kömür ve petrol ürünlerinin yakılması sonucu atmosfere her yıl milyarca metreküp karbondioksit, metan ve azot oksit gazları salınıyor. Kesilen ağaçların yerine yenileri
+                          ekilmediği içinde karbondioksidin geri dönüşümü sağlanamıyor. Çöplüklerden yayılan metan gazları,
+                         buzdolaplarında ve klimalarda kullanılan hidroflorokarbon gazları atmosfere karışarak iklimin dengesini bozuyor
+                    
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      İklim değişikliğinin en büyük sorumluları insanlar mı?
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Bilim insanlarının yüzde 97’si bu sorunun yanıtında hemfikir: Evet atmosferde yaşanan sıcaklık
+                        artışına insan faaliyetleri neden oluyor. Fosil yakıtların ölçüsüzce kullanımı, ormansızlaşma, çevre kirliliğinin suya,
+                        toprağa ve havaya verdiği zarar, atmosferdeki sera gazlarının hızla artmasına ve küresel ısınmaya yol açıyor
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                        İklim değişikliği ve sonuçlarını engellemek hala mümkün mü?
+                      </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                      Her ne kadar insanlar küresel ısınma ve iklim değişikliğinden sorumlu olsalarda sonuçlarını azaltabilmek mümkün.
+                      Ancak bugün sera gazı salınımını durdurursak, küresel sıcaklıklardaki artış birkaç yıl içinde azalmaya başlayacak.
+                      Sıcaklık artışı durma noktasına gelecek, ancak yüzyıllar boyunca oldukça yüksek kalacak.
+                      </div>
+                    </div>
+                  </div>
+              </div>
+        </div>
+    </section>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="proje.html"><span>Global</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="proje.html">Anasayfa</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="sss.html">Soru-Cevap</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="hakkimizda.html">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item"><a href="Bizekatil.html" class="appbtn">Bize Katılın!</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+
+
+    <script
+    src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+    integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
